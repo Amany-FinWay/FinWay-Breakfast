@@ -76,15 +76,19 @@
             let names = [],
                 sandwiches = [],
                 quantity = [],
-                duplicate = [];
+                duplicate = [],
+                FinalOrder = [];
             fetch('http://localhost:3000/Employees')
                 .then(response => response.json())
                 .then(response => {
                     for (var make in response) {
                         names.push(make);
                         for (var i = 0; i < response[make].length; i++) {
-                            sandwiches.push(response[make][i].sandwich);
+                            sandwiches.push(response[make][i].sandwiches);
                             quantity.push(response[make][i].quantity);
+                            FinalOrder.push(
+                                    {"sandwiches" : response[make][i].sandwiches, "quantity": response[make][i].quantity}
+                                )
                         }
                     }
                     const set = new Set(sandwiches);
@@ -105,13 +109,15 @@
                     }
                     let indices = duplicateIndexes(sandwiches, duplicates);
                     let sum = 0;
-                    console.log(response);
-                    console.log(sandwiches);
-                    console.log(quantity);
-                    console.log(duplicateIndexes(sandwiches, duplicates));
-                    console.log(duplicates);
+                    //console.log(response);
+                    //console.log(sandwiches);
+                    //console.log(quantity);
+
+                        console.log(FinalOrder);
+                    //console.log(duplicateIndexes(sandwiches, duplicates));
+                    //console.log(duplicates);
                     for (let ind = 0; ind < indices.length; ind++) {
-                        console.log(sum += quantity[indices.at(ind)])
+                        //console.log(sum += quantity[indices.at(ind)])
                     }
                 })
         });

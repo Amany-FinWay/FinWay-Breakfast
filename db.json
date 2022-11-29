@@ -1,12 +1,16 @@
 {     "Employees": {
         "Amany": [
-            {"sandwich":"فول", "quantity":1},
-            {"sandwich":"اومليت رومي", "quantity":1},
-            {"sandwich":"بطاطس كاتشب مايونيز", "quantity":1}
+            {"sandwiches":"فول", "quantity":1},
+            {"sandwiches":"اومليت رومي", "quantity":1},
+            {"sandwiches":"بطاطس كاتشب مايونيز", "quantity":1}
         ],
         "Nourhan": [
-            {"sandwich":"فول", "quantity":2},
-            {"sandwich":"بطاطس طحينة بس", "quantity":1}
+            {"sandwiches":"فول", "quantity":2},
+            {"sandwiches":"بطاطس طحينة بس", "quantity":1}
+        ],
+        "Hady": [
+            {"sandwiches":"طعمية طحينة بس", "quantity":2},
+            {"sandwiches":"بطاطس طحينة بس", "quantity":1}
         ]
     }
 }
